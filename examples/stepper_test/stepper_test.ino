@@ -1,7 +1,7 @@
 /*
- * Stepper test for Seeed Motor Shield V2
- * loovee @ 15 Mar, 2016
- */
+    Stepper test for Seeed Motor Shield V2
+    loovee @ 15 Mar, 2016
+*/
 
 #include <Stepper.h>
 
@@ -16,8 +16,7 @@ Stepper stepper(STEPS, 8, 11, 12, 13);
 // the previous reading from the analog input
 int previous = 0;
 
-void step(int steps)
-{
+void step(int steps) {
     digitalWrite(9, HIGH);
     digitalWrite(10, HIGH);
     stepper.step(steps);
@@ -25,8 +24,7 @@ void step(int steps)
     digitalWrite(10, LOW);
 }
 
-void setup()
-{
+void setup() {
     // set the speed of the motor to 30 RPMs
     pinMode(9, OUTPUT);
     pinMode(10, OUTPUT);
@@ -35,8 +33,7 @@ void setup()
     stepper.setSpeed(30);
 }
 
-void loop()
-{
+void loop() {
     step(1000);
     step(-1000);
 }

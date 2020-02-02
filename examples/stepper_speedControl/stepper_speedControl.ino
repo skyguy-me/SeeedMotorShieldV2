@@ -1,24 +1,24 @@
 
 /*
- Stepper Motor Control - speed control
+    Stepper Motor Control - speed control
 
- This program drives a unipolar or bipolar stepper motor.
- The motor is attached to digital pins 8 - 11 of the Arduino.
- A potentiometer is connected to analog input 0.
+    This program drives a unipolar or bipolar stepper motor.
+    The motor is attached to digital pins 8 - 11 of the Arduino.
+    A potentiometer is connected to analog input 0.
 
- The motor will rotate in a clockwise direction. The higher the potentiometer value,
- the faster the motor speed. Because setSpeed() sets the delay between steps,
- you may notice the motor is less responsive to changes in the sensor value at
- low speeds.
+    The motor will rotate in a clockwise direction. The higher the potentiometer value,
+    the faster the motor speed. Because setSpeed() sets the delay between steps,
+    you may notice the motor is less responsive to changes in the sensor value at
+    low speeds.
 
- Created 30 Nov. 2009
- Modified 28 Oct 2010
- by Tom Igoe
+    Created 30 Nov. 2009
+    Modified 28 Oct 2010
+    by Tom Igoe
 
- Port to Seeed Motor Shield
- by Loovee 14 Mar, 2016
+    Port to Seeed Motor Shield
+    by Loovee 14 Mar, 2016
 
- */
+*/
 
 #include <Stepper.h>
 
@@ -32,8 +32,7 @@ Stepper myStepper(stepsPerRevolution, 8, 11, 12, 13);
 int stepCount = 0;  // number of steps the motor has taken
 
 
-void step(int steps)
-{
+void step(int steps) {
     digitalWrite(9, HIGH);
     digitalWrite(10, HIGH);
     myStepper.step(steps);
@@ -54,7 +53,7 @@ void loop() {
     if (motorSpeed > 0) {
         myStepper.setSpeed(motorSpeed);
         // step 1/100 of a revolution:
-        step(stepsPerRevolution/100);
+        step(stepsPerRevolution / 100);
     }
 }
 

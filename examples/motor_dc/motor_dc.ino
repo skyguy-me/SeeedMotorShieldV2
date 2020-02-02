@@ -6,14 +6,12 @@
 
 MotorDriver motor;
 
-void setup()
-{
+void setup() {
     // initialize
     motor.begin();
 }
 
-void loop()
-{
+void loop() {
     motor.speed(0, 100);            // set motor0 to speed 100
     delay(1000);
     motor.brake(0);                 // brake

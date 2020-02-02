@@ -19,10 +19,9 @@
 #define SPD_BUFF_STEPS        100
 
 /**Class for Motor Shield**/
-class MotorDriver
-{
+class MotorDriver {
 
-private:
+  private:
     int speed0;
     int speed1;
 
@@ -32,7 +31,7 @@ private:
     int motor_pin_b_plus;
     int motor_pin_b_minus;
 
-public:
+  public:
 
     void begin();
 
