@@ -1,4 +1,4 @@
-# SeeedMotorShieldV2
+# SeeedMotorShieldV2  [![Build Status](https://travis-ci.com/Seeed-Studio/SeeedMotorShieldV2.svg?branch=master)](https://travis-ci.com/Seeed-Studio/SeeedMotorShieldV2)
 Library for Seeed Motor Shield V2
 
 ![](https://statics3.seeedstudio.com/images/105030001%201.jpg)
